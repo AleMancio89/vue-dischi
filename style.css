@@ -28,10 +28,29 @@ header img {
 
 .cds-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding: 100px 0;
+}
+
+#select{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    border-color: #1ED760;
+    background-color: rgb(46, 58, 70);
+    color: #1ED760;
+    margin-bottom: 40px;
+}
+
+.row.albums{
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .cd {
