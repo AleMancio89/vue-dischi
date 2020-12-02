@@ -21,22 +21,21 @@
                 <select id="select" v-model="selected">
                     <option disabled value="">Seleziona il tuo genere preferito</option>
                     <option value="">Tutto</option>
-                    <option>Pop</option>
-                    <option>Rock</option>
-                    <option>Metal</option>
-                    <option>Jazz</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Metal">Metal</option>
+                    <option value="Jazz">Jazz</option>
                 </select>                
             </div>
 
-            <div class="row albums">                
+             <div class="row albums">                
                 <div v-for="disc in filteredMusic" class="cd">
                     <img :src="disc.poster" alt="Album logo">
                     <h3>{{ disc.title }}</h3>
                     <span class="author">{{ disc.author }}</span>
                     <span class="year">{{ disc.year }}</span>
                 </div>
-            </div>
-                    
+            </div>         
 
             
         </div>

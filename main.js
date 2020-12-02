@@ -9,16 +9,13 @@ const app = new Vue({
 	el:"#root",
 	data: {
 		selected: '',
-		albums: [],
+		albums: []
 	},
 	mounted() {
 		//Chiamata API per recuperare i dati necessari che vengono salvati in albums[]
 		axios.get('https://flynn.boolean.careers/exercises/api/array/music')
 		.then(result => {
- 			let {response} = result.data;
-			for(let i = 0; i < response.length; i++){
-				this.albums.push(response[i]);
-			} 
+			this.albums = result.data.response;
 		})
 	},
 	computed:{ 
