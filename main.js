@@ -24,12 +24,8 @@ const app = new Vue({
 			if (this.selected == ''){
 				return this.albums
 			} else {
-				return this.albums.filter(element=>{
-					if (this.selected == element.genre){
-						return element;
-					}
-				})
+				return this.albums.filter(element=> element.genre === this.selected);			
 			}
 		}
 	},
-})
+});
