@@ -1,4 +1,4 @@
-/* 
+/*
 Facciamo una chiamata ajax all'api di boolean al seguente indirizzo.
 L'api ci restituirà decina di dischi musicali che dovremo mostrare all'utente utilizzando Vue.
 Creare una select con i seguenti generi: pop, rock, metal e jazz.
@@ -18,13 +18,13 @@ const app = new Vue({
 			this.albums = result.data.response;
 		})
 	},
-	computed:{ 
+	computed:{
 		//Imposta filtro per genere
 		filteredMusic(){
 			if (this.selected == ''){
 				return this.albums
 			} else {
-				return this.albums.filter(element=> element.genre === this.selected);			
+				return this.albums.filter(element=> element.genre === this.selected);
 			}
 		}
 	},
